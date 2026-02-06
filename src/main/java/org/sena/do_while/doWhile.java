@@ -1,4 +1,4 @@
-package org.sena.doWhile;
+package org.sena.do_while;
 
 public class doWhile {
     public static void main(String[] args) {
