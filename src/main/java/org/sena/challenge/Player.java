@@ -1,5 +1,4 @@
-package org.sena.oop.challenge;
- import org.sena.oop.challenge.Persona;
+package org.sena.challenge;
 
 public class Player extends Persona{
     private int numberPlayer;

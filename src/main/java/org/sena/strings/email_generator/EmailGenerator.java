@@ -1,4 +1,4 @@
-package org.sena.challenges.email_generator;
+package org.sena.strings.email_generator;
 
 public class EmailGenerator {
     public static void main(String[] args) {

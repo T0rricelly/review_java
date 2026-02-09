@@ -1,4 +1,4 @@
-package org.sena.oop.challenge;
+package org.sena.challenge;
 
 public class Ball {
     private String brand;
