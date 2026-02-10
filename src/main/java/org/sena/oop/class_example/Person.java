@@ -1,18 +1,23 @@
 package org.sena.oop.class_example;
-
-public class Person {
+public class Person extends Object{
     private String name;
     private String last_name;
+    private static int countPerson;
 
     public Person(String name, String last_name){
         this.name = name;
         this.last_name = last_name;
     }
 
-    public void showPerson(){
-        System.out.println("Nombre: " + name);
-        System.out.println("Apellido: " + last_name);
+    @Override
+    public String toString(){
+        return "Nombre " + this.name + ", apellido " + this.last_name;
     }
+
+//    public void showPerson(){
+//        System.out.println("Nombre: " + name);
+//        System.out.println("Apellido: " + last_name);
+//    }
 
 
     // Getters and Setters

@@ -8,7 +8,8 @@ public class Dog extends Animal{
         System.out.println("Metodo clase Padre: ");
         super.sleep();
     }
-    public void makeNoise(){
-        System.out.println("Puedo ladrar");
+    @Override
+    protected void makeNoise(){
+        System.out.println("El perro hace wuauf");
     }
 }
