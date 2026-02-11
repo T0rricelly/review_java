@@ -1,10 +1,20 @@
 package org.sena.time_challenge;
 
+import java.util.Scanner;
+
 import static java.lang.Math.abs;
+import java.util.Scanner;
 
 public class Clock {
+    Scanner sc = new Scanner(System.in);
     // Calcular grados por horario - minutero
-    public void hourToMinutes(int hour, int minutes) {
+    public void hourToMinutes() {
+        System.out.println("Ingrese las horas");
+        int hour = sc.nextInt();
+        System.out.println("Ingrese los minutos");
+        int minutes = sc.nextInt();
+        if (hour > 12) hour -= 12;
+        if (hour == 12) hour = 0;
         int gradesPerMinute = 6;
         int gradesPerHour = 30;
         int hourGrades = gradesPerHour * hour;
@@ -12,18 +22,25 @@ public class Clock {
         System.out.println("Los grados son " + (minuteGrades - hourGrades));
     }
     // Calcular grados minutero-segundero
-    public void minutesToSeconds(int minutes, int seconds){
+    public void minutesToSeconds(){
+        System.out.println("Ingrese los minutos");
+        int minutes = sc.nextInt();
+        System.out.println("Ingrese los segundos");
+        int seconds = sc.nextInt();
         int gradesPerMinute = 6;
-        int gradesPerHour = 30;
-        int hourGrades = gradesPerHour * seconds;
-        int minuteGrades = gradesPerMinute * minutes;
-        System.out.println("Los grados son " + (minuteGrades - hourGrades));
+        int gradesPerSeconds = 6;
+        int secondsGrades = gradesPerSeconds * seconds;
+        int minuteGrades = abs(gradesPerMinute * minutes);
+        System.out.println("Los grados son " + (secondsGrades - minuteGrades));
     }
     // Calcular grados horario-segundero
-    public void hourToSeconds(int hour, int seconds){
-        if (hour == 12){
-            hour = 0;
-        }
+    public void hourToSeconds(){
+        System.out.println("Ingrese las horas");
+        int hour = sc.nextInt();
+        System.out.println("Ingrese los segundos");
+        int seconds = sc.nextInt();
+        if (hour > 12) hour -= 12;
+        if (hour == 12) hour = 0;
         int gradesPerSecond = 6;
         int gradesPerHour = 30;
         int hourGrades = gradesPerHour * hour;
@@ -31,16 +48,19 @@ public class Clock {
         int grades = abs(secondGrades - hourGrades);
          System.out.println("Los grados de desplazamiento son " + grades + "grados");
     }
-//    public void selecOption(int opcion, int hour, int minutes, int seconds){
-//        switch  (opcion){
-//            case 1:
-//                hourToMinutes(hour,minutes);
-//            case 2:
-//                minutesToSeconds(minutes, seconds);
-//            case 3:
-//                hourToSeconds(hour, seconds);
-//        }
-//    }
+    public void selecOption(int opcion){
+        switch  (opcion){
+            case 1:
+                hourToMinutes();
+                break;
+            case 2:
+                minutesToSeconds();
+                break;
+            case 3:
+                hourToSeconds();
+                break;
+        }
+    }
 
 
 }
