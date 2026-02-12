@@ -1,15 +1,17 @@
 package org.sena.challenge;
 
-public class Player extends Persona{
+public class Player extends Person {
     private int numberPlayer;
     private String rolePlayer;
     private int amountPoints;
+    private String team;
 
     // Builder
-    public Player(String name, int age, int numberPlayer, String rolePlayer ) {
+    public Player(String name, int age, int numberPlayer, String rolePlayer, String team) {
         super(name, age);
         this.numberPlayer = numberPlayer;
         this.rolePlayer = rolePlayer;
+        this.team = team;
         this.amountPoints = 0;
     }
 
@@ -55,6 +57,18 @@ public class Player extends Persona{
         } else {
             this.amountPoints = amountPoints;
         }
+    }
+
+    public String getTeam(){
+        return  this.team;
+    }
+
+    public void setTeam(String team){
+        this.team = team;
+    }
+    @Override
+    public String toString(){
+        return "Nombre: " + getName() + " edad: " + getAge() + " equipo: " + getTeam();
     }
 
 }

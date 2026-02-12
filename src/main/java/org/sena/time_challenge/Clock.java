@@ -3,7 +3,6 @@ package org.sena.time_challenge;
 import java.util.Scanner;
 
 import static java.lang.Math.abs;
-import java.util.Scanner;
 
 public class Clock {
     Scanner sc = new Scanner(System.in);

@@ -1,6 +1,6 @@
 package org.sena.challenge;
 
-public class Coach extends Persona{
+public class Coach extends Person {
     private int yearsExperience;
 
     // Builder
@@ -19,5 +19,10 @@ public class Coach extends Persona{
     }
     public void setYearsExperience(int yearsExperience){
         this.yearsExperience = yearsExperience;
+    }
+
+    @Override
+    public String toString(){
+        return "Nombre: " + getName() + " edad: " + getAge() + " años de experiencia: " + getYearsExperience();
     }
 }

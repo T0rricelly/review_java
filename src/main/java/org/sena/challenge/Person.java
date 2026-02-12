@@ -1,12 +1,14 @@
 package org.sena.challenge;
 
-public class Persona {
+public class Person {
+    private static int countPerson;
     private String name;
     private int age;
 
-    public Persona(String name, int age){
+    public Person(String name, int age){
         this.name = name;
         this.age = age;
+        countPerson++;
     }
 
     // Methods
@@ -26,5 +28,8 @@ public class Persona {
     }
     public void setAge(int age){
         this.age = age;
+    }
+    public static int getCountPerson(){
+        return Person.countPerson;
     }
 }
