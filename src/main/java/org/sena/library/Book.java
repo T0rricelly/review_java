@@ -1,7 +1,7 @@
 package org.sena.library;
 
 public class Book {
-    private int id_book;
+    private final int id_book;
     private String title;
     private String author;
     public static int countBook;
