@@ -21,6 +21,7 @@ public class Traveler {
         this.startLocation = startLocation;
         this.endLocation = endLocation;
         this.isForeign = isForeign;
+        this.isPregnant = isPregnant;
     }
 
     public int getDocument() {
@@ -79,7 +80,7 @@ public class Traveler {
         this.endLocation = endLocation;
     }
 
-    public boolean isPregnant() {
+    public boolean getisPregnant() {
         return isPregnant;
     }
 
