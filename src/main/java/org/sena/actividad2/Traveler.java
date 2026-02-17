@@ -11,7 +11,7 @@ public class Traveler {
     private boolean isForeign;
     private boolean isPregnant;
 
-
+    //  Constructor
     public Traveler(int document, String names, String last_names, String email, int age, String startLocation, String endLocation, boolean isForeign, boolean isPregnant) {
         this.document = document;
         this.names = names;
@@ -24,6 +24,7 @@ public class Traveler {
         this.isPregnant = isPregnant;
     }
 
+    // Getters And Setters
     public int getDocument() {
         return document;
     }
@@ -88,7 +89,7 @@ public class Traveler {
         isPregnant = pregnant;
     }
 
-    public boolean isForeign() {
+    public boolean getIsForeign() {
         return isForeign;
     }
 
