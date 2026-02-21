@@ -6,7 +6,6 @@ public class Roster {
     public void presentedPlayers(Player[] roster) {
         for (int i = 0; i < roster.length; i++) {
             roster[i].presented();
-            roster[i].statistics();
         }
     }
 

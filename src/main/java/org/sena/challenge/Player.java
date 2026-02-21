@@ -1,6 +1,6 @@
 package org.sena.challenge;
 
-public class Player extends Person {
+public class Player extends Person implements Statistics{
     private int numberPlayer;
     private String rolePlayer;
     private int amountPoints;
@@ -21,8 +21,11 @@ public class Player extends Person {
         System.out.println("El jugador " + getName() + " con el numero " + numberPlayer + " ha anotado " + point + ((point == 1) ? " punto" : " puntos"));
     }
 
-    public void statistics() {
-        System.out.println("El jugador " + getName() + " con el numero " + numberPlayer + " tiene " + amountPoints + " puntos");
+
+    // Metodo implementado de la interface Statistics
+    @Override
+    public void showSummary(){
+        System.out.println("Los puntos totales de " + this.getName() + " son " + this.getAmountPoints());
     }
     @Override
     public void presented(){

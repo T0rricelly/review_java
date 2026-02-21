@@ -1,4 +1,5 @@
 package org.sena.abstract_class;
 
-public class Figure {
+public abstract class Figure { // No se puede instanciar
+    public abstract void draw();
 }

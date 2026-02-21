@@ -3,6 +3,8 @@ package org.sena.challenge.test;
 import org.sena.challenge.*;
 
 import java.util.Scanner;
+import java.util.List;
+import java.util.ArrayList;
 
 
 public class TestPlayer {
@@ -19,52 +21,76 @@ public class TestPlayer {
         lebron.scorePoint(1);
         lebron.scorePoint(3);
         Player tatum = new Player("Tatum", 30, 0, "Alero", "Celtics");
+        tatum.scorePoint(3);
+        tatum.scorePoint(3);
+        tatum.scorePoint(3);
+        tatum.scorePoint(3);
         Player jokic = new Player("Jokic", 38, 3, "Pivót", "Denver");
+        jokic.scorePoint(1);
+        jokic.scorePoint(2);
+        jokic.scorePoint(3);
+        jokic.scorePoint(1);
         Player klay = new Player("Klay", 32, 20, "Escolta", "Maverics");
+        klay.scorePoint(1);
+        klay.scorePoint(3);
+        klay.scorePoint(1);
+        klay.scorePoint(1);
 
         System.out.println("\nCoach");
         Coach joe = new Coach("Joe Mazzulla", 37, 12);
         joe.presented();
 
         // Create Roster
-        System.out.println("\nPresentacion del roster");
-        Player[] allStar = new Player[5];
-        allStar[0] = curry;
-        allStar[1] = lebron;
-        allStar[2] = tatum;
-        allStar[3] = jokic;
-        allStar[4] = klay;
-        Roster roster = new Roster();
-        roster.presentedPlayers(allStar);
-        System.out.println("\nBuscar un jugador en el roster");
-        System.out.println("Ingresa el numero del jugador a buscar:");
-        int searchPlayer = findNumberPlayer.nextInt();
-        roster.searchPlayer(allStar,searchPlayer);
+//        System.out.println("\nPresentacion del roster");
+//        Player[] allStar = new Player[5];
+//        allStar[0] = curry;
+//        allStar[1] = lebron;
+//        allStar[2] = tatum;
+//        allStar[3] = jokic;
+//        allStar[4] = klay;
+//        Roster roster = new Roster();
+//        roster.presentedPlayers(allStar);
+//        System.out.println("\nBuscar un jugador en el roster");
+//        System.out.println("Ingresa el numero del jugador a buscar:");
+//        int searchPlayer = findNumberPlayer.nextInt();
+//        roster.searchPlayer(allStar,searchPlayer);
+//
+//
+//
+//        // Analitics match points
+//        System.out.println("\nEstadisticas partidos" );
+//        Analitycs analitycs = new Analitycs();
+//        analitycs.calculateMatchPoints();
+//
+//
+//        // Mostrar toString de cada objeto persona
+//        System.out.println("\nPersonas activas de la liga");
+//        Person[] personLeague = new Person[6];
+//        personLeague[0] = curry;
+//        personLeague[1] = lebron;
+//        personLeague[2] = klay;
+//        personLeague[3] = jokic;
+//        personLeague[4] = tatum;
+//        personLeague[5] = joe;
+//
+//        for (int i = 0; i < personLeague.length; i++) {
+//            System.out.println(personLeague[i]);
+//        }
+//        System.out.println("El total de personas inscritas en la liga es " + Person.getCountPerson() + " personas");
 
+        // Lista de personas
+        System.out.println();
+        List<Statistics> person = new ArrayList<>();
+        person.add(curry);
+        person.add(lebron);
+        person.add(klay);
+        person.add(jokic);
+        person.add(tatum);
+        person.add(joe);
 
-
-        // Analitics match points
-        System.out.println("\nEstadisticas partidos" );
-        Analitycs analitycs = new Analitycs();
-        analitycs.calculateMatchPoints();
-
-
-        // Mostrar toString de cada objeto persona
-        System.out.println("\nPersonas activas de la liga");
-        Person[] personLeague = new Person[6];
-        personLeague[0] = curry;
-        personLeague[1] = lebron;
-        personLeague[2] = klay;
-        personLeague[3] = jokic;
-        personLeague[4] = tatum;
-        personLeague[5] = joe;
-
-        for (int i = 0; i < personLeague.length; i++) {
-            System.out.println(personLeague[i]);
+        for (Statistics i: person){
+            i.showSummary();
         }
-        System.out.println("El total de personas inscritas en la liga es " + Person.getCountPerson() + " personas");
-
-
         findNumberPlayer.close();
     }
 }

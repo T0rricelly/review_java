@@ -1,20 +1,19 @@
 package org.sena.challenge;
 
-public class Person {
+public abstract class Person {
     private static int countPerson;
     private String name;
     private int age;
 
-    public Person(String name, int age){
+    protected Person(String name, int age){
         this.name = name;
         this.age = age;
         countPerson++;
     }
 
     // Methods
-    public void presented(){
-        System.out.println("Hola mi nombre es " + name);
-    }
+    public abstract void presented();
+
 
     // Getters and Setters
     public String getName(){
