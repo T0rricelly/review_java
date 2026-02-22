@@ -6,7 +6,7 @@ public class Independent extends Contributor {
     private double pension = 0.16;
 
     // Constructor
-    public Independent(String name, double ibc) {
+    public Independent(String name, double ibc) throws InvalidIbcException {
         super(name, ibc);
     }
 
@@ -23,5 +23,14 @@ public class Independent extends Contributor {
         contributionPensionIndependent = ibcBaseIndependent * pension;
         totalContributeIndependent = contributionHealthIndependent + contributionPensionIndependent;
         return totalContributeIndependent;
+    }
+
+    @Override
+    public String toString() {
+        return "Cotizante independiente{\n" +
+                "\tId = " + getId() +
+                "\n\tNombre = " + getName() +
+                ",\n\taportes salud y pension = $" + contributions() +
+                "\n}";
     }
 }

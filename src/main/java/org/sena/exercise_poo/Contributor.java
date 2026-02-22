@@ -8,20 +8,25 @@ public abstract class Contributor {
     private double ibc;
 
     // Constructor para heredar atributos
-    public Contributor(String name, double ibc) {
-        this.id = ++countContributor;
-        this.name = name;
-        this.ibc = ibc;
+    public Contributor(String name, double ibc) throws InvalidIbcException {
+        if (ibc < 1300000) {
+            throw new InvalidIbcException("Respetado cotizante independiente el ibc no puede ser menor al salario minimo legal vigente");
+        } else {
+            this.id = ++countContributor;
+            this.name = name;
+            this.ibc = ibc;
+        }
     }
 
     // Metodo de aportes de salud y pension
     abstract double contributions();
 
     // Getters y Setters
-    public long getId(){
+    public long getId() {
         return id;
     }
-    public void setId(long id){
+
+    public void setId(long id) {
         this.id = id;
     }
 
