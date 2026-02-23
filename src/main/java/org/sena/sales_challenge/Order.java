@@ -1,4 +1,4 @@
-package org.sena.sales;
+package org.sena.sales_challenge;
 
 public class Order {
     private final int id_order;

@@ -1,0 +1,11 @@
+1. Consumer: Recibe un valor y no retorna nada
+2. biConsumer: Recibe dos valores y no retorna nada
+3. Supplier: No recibe ningun valor pero retorna un resultado
+4. Function: Recibe un valor y retorna un resultado
+5. biFunction: Recibe dos valores  y retorna un resultado
+6. Predicate: Recibe un valor y retorna un boolean
+7. biPredicate: Recibe dos valores y retorna un boolean
+8. Binary: Recibe dos valores del mismo tipo y retorna un valor del mismo tipo
+9. Unary: Recibe Recibe un valor lo procesa y devuelve un valor del mismo tipo
+10. Runnable: No recibe valores y no retorna nada solo ejecuta una tarea
+11. Callable: No recibe valores pero retorna un valor y puede lanzar una exception
