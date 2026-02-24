@@ -14,7 +14,7 @@ public class Streams {
         names.stream()
                 .filter((name) -> name.length() > 4 )
                 .forEach((System.out::println));
-
+        // mapToInt():Devuelve un intStream que tiene funciones propias
         // map(): Transforma los elementos aplicando una funcion.
         System.out.println("---Map---");
         names.stream()

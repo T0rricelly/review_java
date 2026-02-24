@@ -71,7 +71,7 @@ public class Player extends Person implements Statistics{
     }
     @Override
     public String toString(){
-        return "Nombre: " + getName() + " edad: " + getAge() + " equipo: " + getTeam();
+        return "Nombre: " + getName() + " edad: " + getAge() + " equipo: " + getTeam() + " con " + getAmountPoints() + " puntos";
     }
 
 }

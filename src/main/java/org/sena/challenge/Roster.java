@@ -9,17 +9,17 @@ public class Roster {
         }
     }
 
-    public void searchPlayer(Player[] roster, int numberPlayer) {
-        boolean find = true;
-        for (int i = 0; i < roster.length; i++) {
-            if (roster[i].getNumberPlayer() == numberPlayer) {
-                System.out.println("Jugador encontrado");
-                roster[i].presented();
-                find = true;
-                break;
-            }
-            find = false;
-        }
-        if (find == false) System.out.println("No se encontro el jugador en el roster");
-    }
+//    public void searchPlayer(Player[] roster, int numberPlayer) {
+//        boolean find = true;
+//        for (int i = 0; i < roster.length; i++) {
+//            if (roster[i].getNumberPlayer() == numberPlayer) {
+//                System.out.println("Jugador encontrado");
+//                roster[i].presented();
+//                find = true;
+//                break;
+//            }
+//            find = false;
+//        }
+//        if (find == false) System.out.println("No se encontro el jugador en el roster");
+//    }
 }
